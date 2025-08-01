@@ -5,7 +5,9 @@
 struct Fibonacci {
     int numbers[11];
     // TODO: 修改方法签名和实现，使测试通过
-    int get(int i) {
+    constexpr int get(int i) const {
+        // 使用 constexpr 数组访问 Fibonacci 数列
+        return (i >= 0 && i < 11) ? numbers[i] : -1; // 返回 -1 表示索引越界
     }
 };
 
